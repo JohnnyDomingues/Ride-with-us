@@ -5,6 +5,7 @@ import SearchDestination from "./pages/SearchDestination";
 import ResultDestination from "./pages/ResultDestination";
 
 import App from "./App";
+
 const router = createBrowserRouter([
   {
     path: "/",
