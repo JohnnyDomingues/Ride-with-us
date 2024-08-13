@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import "../Styles/SearchDestination.css";
 import logo from "../assets/images/Logo-RWU.png";
 import DestinationData from "../components/DestinationData";
@@ -8,11 +9,12 @@ function SearchDestination() {
     temperatureMin: "",
     costOfLivingMin: "",
     hotelPriceMax: "",
-    budgetTransportMax: "", // New criteria for budget transport
+    budgetTransportMax: "",
   });
 
   const [results, setResults] = useState([]);
-
+  const navigate = useNavigate(); // Initialize useNavigate
+  console.info(results)
   const handleChange = (e) => {
     setCriteria({
       ...criteria,
@@ -34,15 +36,13 @@ function SearchDestination() {
         parseFloat(destination.AvgTemperature) >= parseFloat(temperatureMin);
       const matchesCostOfLiving =
         !costOfLivingMin ||
-        parseFloat(destination.Cost_of_Living_Index) >=
-          parseFloat(costOfLivingMin);
+        parseFloat(destination.Cost_of_Living_Index) >= parseFloat(costOfLivingMin);
       const matchesHotelPrice =
         !hotelPriceMax ||
         parseFloat(destination.hotel_price_avg) <= parseFloat(hotelPriceMax);
       const matchesBudgetTransport =
         !budgetTransportMax ||
-        parseFloat(destination.budget_transport) <=
-          parseFloat(budgetTransportMax);
+        parseFloat(destination.budget_transport) <= parseFloat(budgetTransportMax);
 
       return (
         matchesTemperature &&
@@ -56,6 +56,9 @@ function SearchDestination() {
     e.preventDefault();
     const filteredResults = filterDestinations();
     setResults(filteredResults);
+    
+    // Redirect to /result-destination with results in state
+    navigate('/result-destination', { state: { results: filteredResults } });
   };
 
   return (
@@ -81,9 +84,7 @@ function SearchDestination() {
               </select>
             </div>
             <div className="criteria-item">
-              <label htmlFor="costOfLivingMin">
-                Minimum Cost of Living Index
-              </label>
+              <label htmlFor="costOfLivingMin">Minimum Cost of Living Index</label>
               <select
                 id="costOfLivingMin"
                 name="costOfLivingMin"
@@ -113,9 +114,7 @@ function SearchDestination() {
               </select>
             </div>
             <div className="criteria-item">
-              <label htmlFor="budgetTransportMax">
-                Maximum Budget for Transport
-              </label>
+              <label htmlFor="budgetTransportMax">Maximum Budget for Transport</label>
               <select
                 id="budgetTransportMax"
                 name="budgetTransportMax"
@@ -130,26 +129,12 @@ function SearchDestination() {
               </select>
             </div>
           </div>
-          <button type="submit" className="search-button">
-            Go !
-          </button>
+          <button type="submit" className="search-button">Go !</button>
         </form>
-        <div className="results">
-          {results.length > 0 ? (
-            <ul>
-              {results.map((destination) => (
-                <li key={`${destination.City}-${destination.Country}`}>
-                  {destination.City}, {destination.Country}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No results found</p>
-          )}
-        </div>
       </div>
     </div>
   );
 }
 
 export default SearchDestination;
+
