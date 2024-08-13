@@ -1,5 +1,5 @@
-import "../Styles/SearchDestination.css"; // Assure-toi d'importer le fichier CSS
-import logo from "../assets/images/Logo-RWU.png"; // Assure-toi de bien donner le chemin vers ton logo
+import "../Styles/SearchDestination.css";
+import logo from "../assets/images/Logo-RWU.png";
 
 function SearchDestination() {
   return (
