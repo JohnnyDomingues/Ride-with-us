@@ -1,0 +1,22 @@
+.destination-here {
+  display: flex;
+  color: black;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LIdestination {
+  border: solid red;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  width: 50%;
+  flex-direction: column;
+}
+
+.destination-image {
+  width: 100px;
+  height: auto;
+  margin-right: 15px;
+}
