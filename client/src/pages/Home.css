@@ -16,19 +16,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25rem;
-  gap: 5rem;
+  padding: 15rem;
+  gap: 2rem;
 }
 
 .alone {
   color: white;
   font-size: 2.5rem;
+  font-family: var(--font-subtitle);
 }
 
 .ride {
   color: white;
-  font-size: 5rem;
-  padding-top: 6.5rem;
+  font-size: 5em;
 }
 
 .button-home {
@@ -38,13 +38,14 @@
   font-weight: bold;
   color: black;
   background: white;
+  opacity: 75%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-@media (max-height: 932px) {
+@media (max-width: 480px) {
   .logoHome {
     position: static;
   }

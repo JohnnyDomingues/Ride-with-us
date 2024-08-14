@@ -85,4 +85,12 @@ h1 {
   .search-destination {
     padding: 20px;
   }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
 }

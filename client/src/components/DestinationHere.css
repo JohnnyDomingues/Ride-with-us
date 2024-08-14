@@ -7,25 +7,24 @@
 }
 
 .LIdestination {
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   margin: 1rem;
-  width: 95%;
+  width: 75%;
   flex-direction: column;
-  border: 4mm ridge rgb(250 120 14 / 60%);
+  border: 1.5mm double rgb(250 120 14 / 60%);
 }
 
 .destination-image {
-  width: 500px;
-  height: 450px;
+  width: 200px;
+  height: 150px;
 }
 
 .destination-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2rem;
 }
 
 .NoResults {
@@ -34,4 +33,16 @@
   display: flex;
   justify-content: center;
   padding-top: 15rem;
+}
+
+@media (max-width: 480px) {
+  .destination-here {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    display: flex;
+    margin-right: 9rem;
+  }
 }

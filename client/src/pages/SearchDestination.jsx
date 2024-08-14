@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom"; // Import useNavigate
 import "../Styles/SearchDestination.css";
 import logo from "../assets/images/Logo-RWU.png";
 import DestinationData from "../components/DestinationData";
@@ -14,7 +14,7 @@ function SearchDestination() {
 
   const [results, setResults] = useState([]);
   const navigate = useNavigate(); // Initialize useNavigate
-  console.info(results)
+  console.info(results);
   const handleChange = (e) => {
     setCriteria({
       ...criteria,
@@ -36,13 +36,15 @@ function SearchDestination() {
         parseFloat(destination.AvgTemperature) >= parseFloat(temperatureMin);
       const matchesCostOfLiving =
         !costOfLivingMin ||
-        parseFloat(destination.Cost_of_Living_Index) >= parseFloat(costOfLivingMin);
+        parseFloat(destination.Cost_of_Living_Index) >=
+          parseFloat(costOfLivingMin);
       const matchesHotelPrice =
         !hotelPriceMax ||
         parseFloat(destination.hotel_price_avg) <= parseFloat(hotelPriceMax);
       const matchesBudgetTransport =
         !budgetTransportMax ||
-        parseFloat(destination.budget_transport) <= parseFloat(budgetTransportMax);
+        parseFloat(destination.budget_transport) <=
+          parseFloat(budgetTransportMax);
 
       return (
         matchesTemperature &&
@@ -56,14 +58,16 @@ function SearchDestination() {
     e.preventDefault();
     const filteredResults = filterDestinations();
     setResults(filteredResults);
-    
+
     // Redirect to /result-destination with results in state
-    navigate('/result-destination', { state: { results: filteredResults } });
+    navigate("/result-destination", { state: { results: filteredResults } });
   };
 
   return (
     <div className="search-destination">
-      <img src={logo} alt="Logo" className="logo" />
+      <Link to="/">
+        <img src={logo} alt="Logo" className="logo" />
+      </Link>
       <div className="form-container">
         <h1>Find your new adventure now</h1>
         <form onSubmit={handleSearch}>
@@ -84,7 +88,9 @@ function SearchDestination() {
               </select>
             </div>
             <div className="criteria-item">
-              <label htmlFor="costOfLivingMin">Minimum Cost of Living Index</label>
+              <label htmlFor="costOfLivingMin">
+                Minimum Cost of Living Index
+              </label>
               <select
                 id="costOfLivingMin"
                 name="costOfLivingMin"
@@ -114,7 +120,9 @@ function SearchDestination() {
               </select>
             </div>
             <div className="criteria-item">
-              <label htmlFor="budgetTransportMax">Maximum Budget for Transport</label>
+              <label htmlFor="budgetTransportMax">
+                Maximum Budget for Transport
+              </label>
               <select
                 id="budgetTransportMax"
                 name="budgetTransportMax"
@@ -129,7 +137,9 @@ function SearchDestination() {
               </select>
             </div>
           </div>
-          <button type="submit" className="search-button">Go !</button>
+          <button type="submit" className="search-button">
+            GO !
+          </button>
         </form>
       </div>
     </div>
@@ -137,4 +147,3 @@ function SearchDestination() {
 }
 
 export default SearchDestination;
-

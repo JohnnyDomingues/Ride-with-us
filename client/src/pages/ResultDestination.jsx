@@ -1,8 +1,7 @@
-
 import { Link } from "react-router-dom";
 
 import logo from "../assets/images/Logo-RWU.png";
-import "../Styles/resultDestination.css"
+import "../Styles/resultDestination.css";
 import DestinationHere from "../components/DestinationHere";
 
 function ResultDestination() {
@@ -12,11 +11,13 @@ function ResultDestination() {
         <Link to="/">
           <img src={logo} alt="Logo" className="logo" />
         </Link>
+        <Link to="/search-destination">
+          <button type="button" className="button-return">
+            RETURN
+          </button>
+        </Link>
       </nav>
-      <div>
-        <h2 className="we-Found">Did we find something ?</h2>
-      </div>
-      <DestinationHere/>
+      <DestinationHere />
     </div>
   );
 }
