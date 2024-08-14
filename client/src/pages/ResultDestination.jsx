@@ -14,7 +14,7 @@ function ResultDestination() {
         </Link>
       </nav>
       <div>
-        <h2 className="we-Found">We found them!!!</h2>
+        <h2 className="we-Found">Did we find something ?</h2>
       </div>
       <DestinationHere/>
     </div>
