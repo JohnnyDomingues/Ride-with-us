@@ -1,22 +1,37 @@
 .destination-here {
-  display: flex;
+  display: grid;
   color: black;
-  flex-direction: column;
   align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
 }
 
 .LIdestination {
-  border: solid red;
   padding: 2rem;
   display: flex;
   align-items: center;
   margin: 1rem;
-  width: 50%;
+  width: 95%;
   flex-direction: column;
+  border: 4mm ridge rgb(250 120 14 / 60%);
 }
 
 .destination-image {
-  width: 100px;
-  height: auto;
-  margin-right: 15px;
+  width: 500px;
+  height: 450px;
+}
+
+.destination-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.NoResults {
+  color: black;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 15rem;
 }
