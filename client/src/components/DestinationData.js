@@ -7,7 +7,7 @@ const DestinationData = [
     Cost_of_Living_Index: "64.0",
     hotel_price_avg: "82",
     budget_transport: "50",
-    image: "http://localhost:3310/afrique.jpg",
+    image: "http://localhost:3310/Cape-Town.jpg",
   },
   {
     Region: "Asia",
@@ -17,7 +17,7 @@ const DestinationData = [
     Cost_of_Living_Index: "85.0",
     hotel_price_avg: "130",
     budget_transport: "60",
-    image: 'http://localhost:3310/asia.jpg',
+    image: "http://localhost:3310/Tokyo.jpg",
   },
   {
     Region: "Europe",
@@ -27,7 +27,7 @@ const DestinationData = [
     Cost_of_Living_Index: "70.0",
     hotel_price_avg: "150",
     budget_transport: "55",
-    image: 'http://localhost:3310/Europe.jpg',
+    image: "http://localhost:3310/Europe.jpg",
   },
   {
     Region: "North America",
@@ -37,7 +37,7 @@ const DestinationData = [
     Cost_of_Living_Index: "100.0",
     hotel_price_avg: "220",
     budget_transport: "80",
-    image: 'http://localhost:3310/NorthUSA.jpg',
+    image: "http://localhost:3310/NorthUSA.jpg",
   },
   {
     Region: "South America",
@@ -47,7 +47,7 @@ const DestinationData = [
     Cost_of_Living_Index: "50.0",
     hotel_price_avg: "70",
     budget_transport: "40",
-    image: 'http://localhost:3310/southCentralAmerica.jpg',
+    image: "http://localhost:3310/Sao-Paulo.jpg",
   },
   {
     Region: "Oceania",
@@ -57,7 +57,7 @@ const DestinationData = [
     Cost_of_Living_Index: "75.0",
     hotel_price_avg: "140",
     budget_transport: "65",
-    image: 'http://localhost:3310/Australia.jpg',
+    image: "http://localhost:3310/Sydney.jpg",
   },
   {
     Region: "Asia",
@@ -67,7 +67,7 @@ const DestinationData = [
     Cost_of_Living_Index: "45.0",
     hotel_price_avg: "40",
     budget_transport: "30",
-    image: 'http://localhost:3310/asia.jpg',
+    image: "http://localhost:3310/Bangkok.jpg",
   },
   {
     Region: "Europe",
@@ -77,7 +77,7 @@ const DestinationData = [
     Cost_of_Living_Index: "68.0",
     hotel_price_avg: "100",
     budget_transport: "50",
-    image: 'http://localhost:3310/Europe.jpg',
+    image: "http://localhost:3310/Rome.jpg",
   },
   {
     Region: "North America",
@@ -87,7 +87,7 @@ const DestinationData = [
     Cost_of_Living_Index: "80.0",
     hotel_price_avg: "180",
     budget_transport: "70",
-    image: 'http://localhost:3310/NorthUSA.jpg',
+    image: "http://localhost:3310/Toronto.jpg",
   },
   {
     Region: "Africa",
@@ -97,7 +97,7 @@ const DestinationData = [
     Cost_of_Living_Index: "57.0",
     hotel_price_avg: "55",
     budget_transport: "35",
-    image: 'http://localhost:3310/afrique.jpg',
+    image: "http://localhost:3310/Nairobi.jpg",
   },
 ];
 export default DestinationData;
