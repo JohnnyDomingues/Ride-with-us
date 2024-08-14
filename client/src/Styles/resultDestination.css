@@ -16,10 +16,10 @@ body {
   display: flex;
   justify-content: center;
   color: black;
-  font-family: var(--font-subtitle);
+  font-family: "Just Me Again Down Here";
   font-weight: var(--font-bold);
   padding-top: 20px;
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   margin-top: 3rem;
   margin-bottom: 2.3rem;
 }
